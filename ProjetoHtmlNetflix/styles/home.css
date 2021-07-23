@@ -1,0 +1,126 @@
+/* ->Var<- */
+:root {
+  --red: #e50914;
+  --black: #141414;
+}
+
+/* ->Reset<- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ->Body<- */
+body {
+  background: var(--black);
+  color: #fff;
+  font-family: "Arial", Times, serif;
+}
+
+/* ->Container<- */
+.container {
+  margin: 15px 30px;
+}
+
+/* ->Header<- */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+header .logo {
+  color: var(--red);
+  font-family: "Arial Black", Times;
+  font-size: 40px;
+}
+
+header nav a {
+  color: #aaa;
+  margin-right: 10px;
+  transition: 0.3s ease all;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+header nav a:last-child {
+  margin-right: 0px;
+}
+
+/* ->Main<- */
+.mainBg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url(../src/bgBreakingBad.jpg);
+  font-size: 16px;
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-position: center 20%;
+}
+
+.mainBg .container {
+  width: 80%;
+}
+
+.mainBg h3 {
+  font-size: 40px;
+  margin-bottom: 8px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.mainBg p {
+  margin-bottom: 90px;
+  min-width: 50%;
+}
+
+.btn {
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 12px;
+  transition: 0.3s ease all;
+}
+
+@media (max-width: 520px) {
+  .btn {
+    margin-top: 5px;
+    width: 300px;
+  }
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ->Carousel<- */
+.carousel {
+  padding: 30px 0;
+}
+
+.carousel img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
